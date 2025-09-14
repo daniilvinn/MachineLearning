@@ -154,7 +154,6 @@ Epoch 10, Total Loss: 0.045231, MSE: 0.042156, Perceptual: 0.030750
 
 1. **Single Image Overfitting**: Not suitable for general deblurring without retraining
 2. **Fixed Blur Type**: Only trained on Gaussian blur (radius=5)
-3. **Resolution**: Optimized for 512×512 images
 4. **Memory**: Perceptual loss requires loading VGG19 model
 
 ## 🔮 Future Improvements
