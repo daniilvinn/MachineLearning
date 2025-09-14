@@ -1,6 +1,6 @@
 # 🧠 MachineLearning
 
-🧑‍🎓 **This is my personal educational playground for deep learning and machine learning.** Here, I collect and implement various neural networks and ML/DL projects—mainly in PyTorch—to help myself (and others) learn the core ideas, architectures, and training tricks of modern AI. Every project is built from scratch with a focus on understanding, not production code: you'll find hands-on, step-by-step examples that make it easier to grasp how neural networks and computer vision models work under the hood. 🚀📚
+📚 **Educational Machine Learning Repository** - A comprehensive collection of deep learning and machine learning implementations designed for educational purposes. This repository features various neural network architectures and ML projects built primarily in PyTorch, with a focus on demonstrating fundamental concepts, training methodologies, and architectural principles of modern AI systems. Each project is implemented from scratch to provide clear, step-by-step examples that facilitate understanding of how neural networks and computer vision models operate at their core, prioritizing educational value and code clarity over production optimization.
 
 ## 🤖 Models
 
