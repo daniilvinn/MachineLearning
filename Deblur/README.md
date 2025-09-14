@@ -1,4 +1,4 @@
-# Image Deblurring Network
+# 🖼️ Image Deblurring Network
 
 A deep learning project that implements a Convolutional Neural Network (CNN) for image deblurring using PyTorch. This network is designed to remove Gaussian blur from images and reconstruct sharp, clear images using a combination of pixel-wise and perceptual losses.
 
@@ -13,7 +13,7 @@ This project demonstrates a simple yet effective approach to image deblurring us
 - Perceptual loss using pre-trained VGG19 features
 - Proper gradient clipping and regularization
 
-## Model Architecture
+## 🏗️ Model Architecture
 
 ### Network Design
 The `DeblurNet` is a CNN with residual/skip connections that preserves the original image information while learning to reconstruct sharp details.
@@ -44,10 +44,10 @@ Add Residual Connection → Sigmoid → Output (3 channels)
 - **Tanh Activations**: Provides smooth gradients throughout the network
 - **All Convolutions Preserve Spatial Dimensions**: Same padding ensures input/output size consistency
 
-## Training Details
+## 🎯 Training Details
 
 ### Overfitting Strategy
-**Important Note**: This network is designed to overfit on a single image. This is intentional for demonstration purposes and allows the network to learn very specific features of the target image. For real-world applications, you would need a dataset of many image pairs.
+⚠️ **Important Note**: This network is designed to overfit on a single image. This is intentional for demonstration purposes and allows the network to learn very specific features of the target image. For real-world applications, you would need a dataset of many image pairs.
 
 ### Loss Functions
 The training uses a combination of two loss functions:
@@ -70,9 +70,9 @@ The training uses a combination of two loss functions:
 - **Weight Decay**: 1e-5 for regularization
 - **TF32 Acceleration**: Enabled on compatible CUDA devices
 
-## Setup and Usage
+## 🚀 Setup and Usage
 
-### Data Requirements
+### 📁 Data Requirements
 Your training image must be placed in the `data/` directory and named `sample.jpg`.
 
 **Data Loading Code Reference** (lines 20-22 in `Deblur.py`):
@@ -89,7 +89,7 @@ The image will be:
 - Normalized to [0,1] range
 - Converted to PyTorch tensors
 
-### Hyperparameter Tuning
+### ⚙️ Hyperparameter Tuning
 
 #### Learning Rate (`lr`)
 **Default**: 0.0001  
@@ -117,7 +117,7 @@ mse_weight = 1.0        # Pixel-wise accuracy
 perceptual_weight = 0.1 # Perceptual quality
 ```
 
-## Requirements
+## 📋 Requirements
 
 - PyTorch
 - torchvision  
@@ -125,20 +125,20 @@ perceptual_weight = 0.1 # Perceptual quality
 - NumPy
 - Matplotlib
 
-## Hardware Recommendations
+## 💻 Hardware Recommendations
 
 - **GPU**: CUDA-compatible GPU recommended (automatically detected)
 - **Memory**: At least 4GB GPU memory for 512×512 images
 - **CPU**: Fallback support available but significantly slower
 
-## Output
+## 📊 Output
 
 After training, the model will:
 1. Display a comparison plot showing original, blurred, and reconstructed images
 2. Save the reconstructed image as `reconstructed_image.jpg`
 3. Print training progress every 10 epochs
 
-## Performance Monitoring
+## 📈 Performance Monitoring
 
 Training progress is logged every 10 epochs showing:
 - **Total Loss**: Combined MSE + Perceptual loss
@@ -150,14 +150,14 @@ Example output:
 Epoch 10, Total Loss: 0.045231, MSE: 0.042156, Perceptual: 0.030750
 ```
 
-## Limitations
+## ⚠️ Limitations
 
 1. **Single Image Overfitting**: Not suitable for general deblurring without retraining
 2. **Fixed Blur Type**: Only trained on Gaussian blur (radius=5)
 3. **Resolution**: Optimized for 512×512 images
 4. **Memory**: Perceptual loss requires loading VGG19 model
 
-## Future Improvements
+## 🔮 Future Improvements
 
 - Train on diverse image datasets
 - Implement different blur kernels (motion blur, defocus)
