@@ -16,6 +16,18 @@
 
 The model learns to map blurred images back to sharp versions using a symmetric encoder-decoder architecture with skip connections to preserve original image information.
 
+### [🔍 ImageRecognition](ImageRecognition/)
+**Multi-Dataset Image Recognition Network** - A comprehensive CNN for classifying hundreds of classes across multiple datasets.
+
+- **Architecture**: Wide CNN with 4 blocks (128→256→512→1024 filters, ~83M parameters)
+- **Training Approach**: Multi-dataset unified training across 10+ popular CV datasets
+- **Datasets**: MNIST, Fashion-MNIST, CIFAR-10/100, SVHN, STL-10, Food-101, Flowers-102, Oxford Pet, Caltech-101/256
+- **Features**: Mixed precision training, extensive data augmentation, automatic checkpointing
+- **Input/Output**: 64×64 RGB images → hundreds of class predictions with confidence scores
+- **Use Case**: Comprehensive multi-domain image classification system
+
+The model combines multiple datasets into a unified recognition system capable of identifying digits, fashion items, objects, food, flowers, pets, and more through a single neural network.
+
 ## 🚀 Setup
 
 ### Quick Start
